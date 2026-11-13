@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#233828" />
+    <meta
+      name="description"
+      content="Meet Komorebi. A Filipino skincare concept rooted in gentle, everyday care, quiet progress, and beauty that unfolds in its own time."
+    />
+    <title>Komorebi — Beauty, unnoticed.</title>
+    <link rel="icon" href="assets/brand/symbol.png" type="image/png" />
+    <link
+      rel="preload"
+      href="assets/fonts/eb-garamond.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <!-- Static intro, never a video. JS adds it only when motion is allowed. -->
+    <div class="intro" aria-hidden="true">
+      <span class="intro-kicker">A MOMENT OF STILLNESS</span>
+      <span class="intro-wordmark">Komorebi<span>®</span></span>
+      <span class="intro-tagline">Beauty, unnoticed.</span>
+      <button class="intro-skip" tabindex="-1">Enter quietly <span>↗</span></button>
+      <span class="intro-line"></span>
+    </div>
+
+    <header class="site-header" id="header">
+      <a class="wordmark" href="#home" aria-label="Komorebi home">Komorebi<span>®</span></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#home" class="active">Home<span>01</span></a>
+        <a href="#about">About<span>02</span></a>
+        <a href="#brand">Brand<span>03</span></a>
+        <a href="#posts">Posts<span>04</span></a>
+      </nav>
+      <a class="header-note" href="#rituals">A little care, daily <span>↗</span></a>
+      <button
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        aria-label="Open menu"
+      >
+        <span></span><span></span>
+      </button>
+      <div class="scroll-progress" aria-hidden="true"></div>
+    </header>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" inert>
+      <a href="#home"><small>01</small>Home</a><a href="#about"><small>02</small>About</a
+      ><a href="#brand"><small>03</small>Brand</a><a href="#posts"><small>04</small>Posts</a>
+      <p>Beauty, unnoticed.</p>
+    </nav>
+
+    <main id="main">
+      <section class="hero section-track" id="home" aria-labelledby="hero-title">
+        <div class="hero-eyebrow">
+          <span>FILIPINO SKINCARE, THOUGHTFULLY IMAGINED</span><span>EST. IN QUIET PROGRESS</span>
+        </div>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="micro hero-micro">
+              <span class="live-dot"></span> A GENTLER KIND OF EVERYDAY
+            </p>
+            <h1 id="hero-title">Good skin.<br />In your <em>own time.</em></h1>
+            <p class="hero-description">
+              Some things are too beautiful to rush.<br />A little care. A little patience. A little
+              more you.
+            </p>
+            <a class="round-link light" href="#about"
+              ><span class="round-arrow">↗</span><span>Let us introduce ourselves</span></a
+            >
+          </div>
+          <div class="hero-art">
+            <span class="vertical-note">LIGHT / LEAVES / LITTLE BEGINNINGS</span>
+            <!-- Replace this div with an img; keep class="hero-photo". See README. -->
+            <img class="hero-photo" src="assets/photos/hero.jpg" alt="Sunlight filtering through green leaves" width="900" height="1100">
+            <!-- <div
+              class="photo-placeholder hero-photo"
+              role="img"
+              aria-label="Placeholder for sunlight passing through leaves"
+            >
+              <svg class="botanical" viewBox="0 0 400 600" fill="none" aria-hidden="true">
+                <path
+                  d="M190 610C145 420 252 232 205-20M185 470C65 436 32 322 45 271C155 296 201 368 185 470ZM192 385C304 361 359 267 349 204C236 231 183 301 192 385ZM218 268C109 241 89 164 102 111C188 130 237 188 218 268ZM220 173C306 147 324 78 307 31C233 52 209 108 220 173Z"
+                  stroke="currentColor"
+                  stroke-width="1.2"
+                />
+                <path
+                  d="M185 470L45 271M192 385L349 204M218 268L102 111M220 173L307 31"
+                  stroke="currentColor"
+                  stroke-width=".7"
+                />
+              </svg>
+              <div class="placeholder-label">
+                <span>01 / YOUR PHOTOGRAPH</span>
+                <p>Sunlight through leaves</p>
+                <span>REPLACE WITH A MOMENT YOU LOVE</span>
+              </div>
+            </div> -->
+            <div class="hero-seal" aria-hidden="true">
+              <span>quiet</span><em>by nature</em><span>Komorebi</span>
+            </div>
+            <div class="hero-caption">
+              <span>木漏れ日</span>
+              <p>Sunlight finding its way<br />through the leaves.</p>
+              <span>01 — 04</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-bottom">
+          <a href="#about">SCROLL TO UNFOLD <span>↓</span></a
+          ><span>GENTLE CARE. NO HURRY.</span>
+        </div>
+      </section>
+
+      <div class="ticker" aria-hidden="true">
+        <div>
+          <span>Beauty, unnoticed.</span><i>✳</i><span>Care, every day.</span><i>✳</i
+          ><span>Progress, quietly.</span><i>✳</i><span>Beauty, unnoticed.</span><i>✳</i
+          ><span>Care, every day.</span><i>✳</i><span>Progress, quietly.</span><i>✳</i>
+        </div>
+      </div>
+
+      <section class="about section-pad section-track" id="about" aria-labelledby="about-title">
+        <div class="section-heading reveal">
+          <p class="micro">02 / OUR ROOTS</p>
+          <span>NOT ANOTHER TRANSFORMATION STORY.</span>
+        </div>
+        <div class="story-grid">
+          <div class="story-left reveal">
+            <h2 id="about-title">We believe in<br />the <em>little things.</em></h2>
+            <p class="large-copy">The care you come back to.<br />The changes you almost miss.</p>
+            <div class="story-definition">
+              <span>Komorebi</span><small>noun · Japanese</small>
+              <p>Sunlight filtering through the leaves of trees.</p>
+            </div>
+          </div>
+          <div class="story-right reveal">
+            <p class="micro">A SMALL BEGINNING. A SHARED BELIEF.</p>
+            <p>
+              Komorebi began with four people and one simple thought: taking care of your skin
+              should feel comforting.
+            </p>
+            <p>
+              Inspired by sunlight passing through leaves, we imagined a Filipino skincare brand
+              built on gentle, reliable, affordable care. Something you can make part of your life,
+              one ordinary day at a time.
+            </p>
+            <p>
+              Because progress isn't always a dramatic before and after. Sometimes, it is simply
+              feeling more at home in your own skin.
+            </p>
+            <span class="handwritten">Slowly is still forward.</span>
+          </div>
+        </div>
+        <div class="beliefs">
+          <article class="belief reveal">
+            <span>01 / MISSION</span>
+            <h3>Care within reach.</h3>
+            <p>
+              To make gentle, reliable, affordable skincare a simple and worthwhile part of everyday
+              routines.
+            </p>
+          </article>
+          <article class="belief reveal">
+            <span>02 / VISION</span>
+            <h3>Room to grow.</h3>
+            <p>
+              To become a trusted Filipino skincare brand that people grow with, shaping a healthier
+              view of beauty through patient care.
+            </p>
+          </article>
+          <div class="belief-note reveal">
+            <span class="asterisk">✳</span>
+            <p>Less pressure.<br />More <em>possibility.</em></p>
+          </div>
+        </div>
+
+        <div class="team-intro reveal">
+          <h3>Four people.<br /><em>One quiet beginning.</em></h3>
+          <p>The people behind the name.<br />A shared dream, taking root.</p>
+        </div>
+        <div class="team-grid">
+          <article class="team-card reveal">
+            <img class="team-photo" src="assets/photos/kurt.jpg" alt="Kurt Arguelles" width="600" height="800" loading="lazy" style="width:100%;object-fit:cover">
+            <h4>Kurt M. Arguelles</h4>
+            <p>Co-creator / Komorebi</p>
+          </article>
+          <article class="team-card reveal">
+            <div
+              class="photo-placeholder team-photo"
+              role="img"
+              aria-label="Portrait placeholder for Juneeca Lacanilao"
+            >
+              <span class="portrait-monogram">JL</span
+              ><span class="portrait-index">02 / PORTRAIT</span>
+            </div>
+            <h4>Juneeca A. Lacanilao</h4>
+            <p>Co-creator / Komorebi</p>
+          </article>
+          <article class="team-card reveal">
+            <div
+              class="photo-placeholder team-photo"
+              role="img"
+              aria-label="Portrait placeholder for John Nelson Parungao"
+            >
+              <span class="portrait-monogram">JP</span
+              ><span class="portrait-index">03 / PORTRAIT</span>
+            </div>
+            <h4>John Nelson L. Parungao</h4>
+            <p>Co-creator / Komorebi</p>
+          </article>
+          <article class="team-card reveal">
+            <div
+              class="photo-placeholder team-photo"
+              role="img"
+              aria-label="Portrait placeholder for Joseph Pineda"
+            >
+              <span class="portrait-monogram">JP</span
+              ><span class="portrait-index">04 / PORTRAIT</span>
+            </div>
+            <h4>Joseph M. Pineda</h4>
+            <p>Co-creator / Komorebi</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="rituals section-pad" id="rituals" aria-labelledby="rituals-title">
+        <div class="ritual-heading reveal">
+          <div>
+            <p class="micro">THE EVERYDAY COLLECTION / PRODUCT CONCEPTS</p>
+            <h2 id="rituals-title">Make room<br />for a <em>small ritual.</em></h2>
+          </div>
+          <p>Five little moments of care.<br />One everyday rhythm.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card reveal">
+            <div class="product-photo">
+              <img src="assets/photos/cleanser.png" alt="Komorebi Gentle Cleanser" width="500" height="700" loading="lazy">
+            </div>
+            <div class="product-meta">
+              <span>01 / CLEANSE</span>
+              <h3>Gentle Cleanser</h3>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <div class="product-photo">
+              <img src="assets/photos/toner.png" alt="Komorebi Gentle Cleanser" width="500" height="700" loading="lazy">
+            </div>
+            <div class="product-meta">
+              <span>02 / REFRESH</span>
+              <h3>Hydrating Toner</h3>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <div class="product-photo">
+              <img src="assets/photos/serum.png" alt="Komorebi Hydrating Serum" width="500" height="700" loading="lazy">
+            </div>
+            <div class="product-meta">
+              <span>03 / HYDRATE</span>
+              <h3>Hydrating Serum</h3>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <div class="product-photo">
+              <img src="assets/photos/moisturizer.png" alt="Komorebi Moisturizer" width="500" height="700" loading="lazy">
+            </div>
+            <div class="product-meta">
+              <span>04 / COMFORT</span>
+              <h3>Moisturizer</h3>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <div class="product-photo">
+              <img src="assets/photos/sunscreen.png" alt="Komorebi Sunscreen SPF 50" width="500" height="700" loading="lazy">
+            </div>
+            <div class="product-meta">
+              <span>05 / PROTECT</span>
+              <h3>Sunscreen SPF 50</h3>
+            </div>
+          </article>
+        </div>
+        <p class="ritual-footnote">
+          A glimpse of our imagined collection. Product artwork is replaceable; silhouettes are
+          illustrative.
+        </p>
+      </section>
+
+      <section class="brand section-pad section-track" id="brand" aria-labelledby="brand-title">
+        <div class="section-heading reveal">
+          <p class="micro">03 / THE LANGUAGE OF KOMOREBI</p>
+          <span>A LITTLE MEANING IN EVERY DETAIL.</span>
+        </div>
+        <div class="brand-title reveal">
+          <h2 id="brand-title">Quiet by nature.<br /><em>Considered by design.</em></h2>
+          <p>Three familiar things.<br />One symbol of gentle possibility.</p>
+        </div>
+        <div class="identity-grid">
+          <div class="symbol-stage reveal">
+            <span class="micro">01 / THE PRIMARY SYMBOL</span>
+            <div class="symbol-orbit">
+              <span class="orbit-ring"></span
+              ><img
+                id="symbol-image"
+                src="assets/brand/symbol.png"
+                width="2000"
+                height="2000"
+                alt="Komorebi gold symbol combining a leaf, human face and sun"
+              />
+            </div>
+            <span class="symbol-stage-note">LOOK A LITTLE CLOSER.</span>
+          </div>
+          <div class="dissection reveal">
+            <div class="symbol-tabs" role="tablist" aria-label="Explore the logo">
+              <button
+                role="tab"
+                aria-selected="true"
+                aria-controls="symbol-panel"
+                id="tab-whole"
+                data-part="whole"
+              >
+                The whole</button
+              ><button
+                role="tab"
+                aria-selected="false"
+                aria-controls="symbol-panel"
+                id="tab-leaf"
+                data-part="leaf"
+                tabindex="-1"
+              >
+                Leaf</button
+              ><button
+                role="tab"
+                aria-selected="false"
+                aria-controls="symbol-panel"
+                id="tab-face"
+                data-part="face"
+                tabindex="-1"
+              >
+                Face</button
+              ><button
+                role="tab"
+                aria-selected="false"
+                aria-controls="symbol-panel"
+                id="tab-sun"
+                data-part="sun"
+                tabindex="-1"
+              >
+                Sun
+              </button>
+            </div>
+            <div id="symbol-panel" class="symbol-panel" role="tabpanel" aria-labelledby="tab-whole">
+              <span class="micro" id="part-number">THREE IDEAS / ONE IDENTITY</span>
+              <h3 id="part-title">A story in<br />the spaces between.</h3>
+              <p id="part-description">
+                The leaf speaks of nature and gentle care. The face celebrates natural beauty. The
+                sun carries the meaning of Komorebi: sunlight passing through leaves.
+              </p>
+            </div>
+            <div class="gestalt">
+              <p class="micro">THE ART OF SEEING</p>
+              <p>
+                <b>Figure–ground.</b> Beauty revealed in negative space.<br /><b>Closure.</b> Open
+                forms, completed by the eye.<br /><b>Continuity.</b> Curves that belong together.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="wordmark-stage reveal">
+          <span class="micro">02 / THE SECONDARY WORDMARK</span
+          ><img
+            src="assets/brand/wordmark.png"
+            width="1400"
+            height="240"
+            alt="Komorebi secondary wordmark"
+          /><span>AN IDENTITY THAT DOESN'T NEED TO SHOUT.</span>
+        </div>
+        <div class="brand-foundations">
+          <div class="palette-block reveal">
+            <p class="micro">THE ORIGINAL IDENTITY PALETTE</p>
+            <h3>Warm light.<br /><em>Grounded ink.</em></h3>
+            <div class="identity-palette">
+              <button
+                class="swatch gold"
+                data-color="#C8A020"
+                aria-label="Copy Gold color, #C8A020"
+              >
+                <span>Gold</span><small>#C8A020 <i>↗</i></small></button
+              ><button
+                class="swatch eclipse"
+                data-color="#3B3838"
+                aria-label="Copy Eclipse color, #3B3838"
+              >
+                <span>Eclipse</span><small>#3B3838 <i>↗</i></small>
+              </button>
+            </div>
+            <p>
+              Sunlight's warmth meets a quiet, grounding contrast.<br /><small
+                >Click a swatch to copy its hex code.</small
+              >
+            </p>
+          </div>
+          <div class="type-block reveal">
+            <p class="micro">OUR TYPOGRAPHIC VOICE</p>
+            <span class="type-aa">Aa<span>Gg</span></span>
+            <h3>Garamond</h3>
+            <p>
+              Literary, expressive, quietly enduring.<br />Our voice for titles and moments that
+              matter.
+            </p>
+            <div class="type-secondary">
+              <span>HK Gothic</span>
+              <p>Clarity for the everyday.<br />Supporting labels, captions, and body copy.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="quote-section">
+        <div class="quote-lines" aria-hidden="true"></div>
+        <p class="micro reveal">OUR LITTLE REMINDER</p>
+        <p class="statement reveal">
+          You don't have to<br /><em>become someone else</em><br />to care for yourself.
+        </p>
+        <span class="quote-signature reveal">Beauty, unnoticed.</span>
+      </section>
+
+      <section class="posts section-pad section-track" id="posts" aria-labelledby="posts-title">
+        <div class="section-heading reveal">
+          <p class="micro">04 / FROM OUR JOURNAL</p>
+          <span>THINGS WE'VE PUT INTO THE WORLD.</span>
+        </div>
+        <div class="posts-heading reveal">
+          <h2 id="posts-title">Little beginnings.<br /><em>Out in the open.</em></h2>
+          <div class="post-tabs" role="tablist" aria-label="Choose a brand post">
+            <button role="tab" aria-selected="true" aria-controls="post-first" id="post-tab-first">
+              01 / First hello</button
+            ><button
+              role="tab"
+              aria-selected="false"
+              aria-controls="post-event"
+              id="post-tab-event"
+              tabindex="-1"
+            >
+              02 / Grand opening
+            </button>
+          </div>
+        </div>
+        <div class="post-panel" id="post-first" role="tabpanel" aria-labelledby="post-tab-first">
+          <button
+            class="artwork-button"
+            data-artwork="assets/posts/first-post.png"
+            data-title="Komorebi — first brand post"
+            aria-label="Enlarge the first brand post"
+          >
+            <img
+              src="assets/posts/first-post.png"
+              alt="Komorebi moisturizer and cleanser surrounded by water against a sunlit botanical background"
+              width="1080"
+              height="1080"
+              loading="lazy"
+            /><span>VIEW ARTWORK <i>↗</i></span>
+          </button>
+          <div class="post-story">
+            <p class="micro">01 / THE FIRST EVER BRAND POST</p>
+            <h3>Something gentle<br /><em>is on its way.</em></h3>
+            <div class="caption">
+              <p class="caption-lead">Mayro'n din naman palang ganda ang buhay. ✨</p>
+              <p>
+                And we found that beauty in creating something we've always dreamed of sharing with
+                you.
+              </p>
+              <p>
+                Introducing Komorebi, a skincare journey made with love, care, and a dream to help
+                you embrace your natural glow.
+              </p>
+              <p><em>Something gentle is on its way.</em></p>
+            </div>
+            <div class="post-spec">
+              <span>TYPE / GARAMOND + HK GOTHIC</span
+              ><span>COLOR / BOTANICAL GREENS + WARM GOLD</span>
+            </div>
+            <div class="mini-palette" aria-label="First post interpreted palette">
+              <button
+                style="--swatch:#233828"
+                data-color="#233828"
+                aria-label="Copy forest #233828"
+              ></button
+              ><button
+                style="--swatch:#5C7055"
+                data-color="#5C7055"
+                aria-label="Copy moss #5C7055"
+              ></button
+              ><button
+                style="--swatch:#6E7A4B"
+                data-color="#6E7A4B"
+                aria-label="Copy olive #6E7A4B"
+              ></button
+              ><button
+                style="--swatch:#C8A020"
+                data-color="#C8A020"
+                aria-label="Copy gold #C8A020"
+              ></button
+              ><button
+                style="--swatch:#FAF8F5"
+                data-color="#FAF8F5"
+                aria-label="Copy off-white #FAF8F5"
+              ></button>
+            </div>
+            <small class="palette-note">An interpreted palette drawn from the artwork.</small>
+          </div>
+        </div>
+        <div
+          class="post-panel"
+          id="post-event"
+          role="tabpanel"
+          aria-labelledby="post-tab-event"
+          hidden
+        >
+          <button
+            class="artwork-button poster-art"
+            data-artwork="assets/posts/event-poster.png"
+            data-title="Komorebi — promotional event poster"
+            aria-label="Enlarge the promotional event poster"
+          >
+            <img
+              src="assets/posts/event-poster.png"
+              alt="Komorebi Grand Opening promotional poster featuring a green botanical skincare collection"
+              width="1080"
+              height="1350"
+              loading="lazy"
+            /><span>VIEW ARTWORK <i>↗</i></span>
+          </button>
+          <div class="post-story">
+            <p class="micro">02 / PROMOTIONAL EVENT POSTER</p>
+            <h3>A little more<br /><em>natural glow.</em></h3>
+            <p>
+              A botanical introduction to the Komorebi collection. Leaf greens, softly lit products,
+              and warm earth accents bring the brand's quiet character into the world.
+            </p>
+            <p>
+              The campaign pairs the expressive curves of Garamond with the clear, structured voice
+              of HK Gothic.
+            </p>
+            <div class="post-spec">
+              <span>TYPE / GARAMOND + HK GOTHIC</span><span>SCHEME / GREEN-LED ANALOGOUS</span>
+            </div>
+            <div class="event-palette">
+              <button style="--swatch:#3A5932" data-color="#3A5932"><span>#3A5932</span></button
+              ><button style="--swatch:#8BA663" data-color="#8BA663"><span>#8BA663</span></button
+              ><button style="--swatch:#CBD9B0" data-color="#CBD9B0"><span>#CBD9B0</span></button
+              ><button style="--swatch:#735E4C" data-color="#735E4C"><span>#735E4C</span></button
+              ><button style="--swatch:#D9D9D9" data-color="#D9D9D9"><span>#D9D9D9</span></button>
+            </div>
+            <p class="palette-note">
+              Green-led analogous hues, supported by brown and neutral accents. Original campaign
+              artwork shown as a brand archive.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <p>A little care.<br /><em>A little more you.</em></p>
+        <a href="#home" class="back-top"
+          ><span>Back to the beginning</span><span class="round-arrow">↑</span></a
+        >
+      </div>
+      <a class="footer-wordmark" href="#home" aria-label="Komorebi, back to home"
+        >Komorebi<span>®</span></a
+      >
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> KOMOREBI</span><span>BEAUTY, UNNOTICED.</span
+        ><span>A FILIPINO SKINCARE BRAND CONCEPT</span>
+      </div>
+    </footer>
+    <div class="toast" role="status" aria-live="polite"></div>
+    <dialog class="artwork-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-bar">
+        <h2 id="dialog-title">Artwork</h2>
+        <button class="dialog-close" aria-label="Close artwork">Close <span>×</span></button>
+      </div>
+      <img id="dialog-image" src="assets/posts/first-post.png" alt="" />
+      <p>Take a closer look.</p>
+    </dialog>
+  </body>
+</html>
