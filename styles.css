@@ -88,6 +88,28 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* Allow image-bearing grid children to shrink below their intrinsic width.
+   This fixes the layout itself rather than hiding horizontal overflow. */
+.hero-grid > *,
+.story-grid > *,
+.beliefs > *,
+.team-grid > *,
+.product-grid > *,
+.identity-grid > *,
+.brand-foundations > *,
+.identity-palette > *,
+.post-panel > * {
+  min-width: 0;
+}
+
+/* Preserve the intended crop when a portrait is an actual img element. */
+img.team-photo {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
 svg {
   display: block;
 }
@@ -380,7 +402,7 @@ button[hidden],
 }
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.18fr 1fr;
+  grid-template-columns: minmax(0, 1.18fr) minmax(0, 1fr);
   gap: 4vw;
   align-items: center;
   padding: 58px 0 38px;
@@ -611,7 +633,7 @@ button[hidden],
 }
 .story-grid {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   gap: 10vw;
 }
 .large-copy {
@@ -661,7 +683,7 @@ button[hidden],
 }
 .beliefs {
   display: grid;
-  grid-template-columns: 1fr 1fr 0.7fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 0.7fr);
   gap: 6vw;
   margin: 85px 0 110px;
 }
@@ -714,7 +736,7 @@ button[hidden],
 }
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px;
 }
 .team-card:nth-child(even) {
@@ -784,7 +806,7 @@ button[hidden],
 }
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 18px;
 }
 .product-photo {
@@ -929,7 +951,7 @@ button[hidden],
 }
 .identity-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 6vw;
 }
 .symbol-stage {
@@ -1074,7 +1096,7 @@ button[hidden],
 }
 .brand-foundations {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 7vw;
   margin-top: 85px;
 }
@@ -1090,7 +1112,7 @@ button[hidden],
 }
 .identity-palette {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 12px;
   margin-top: 28px;
 }
@@ -1250,7 +1272,7 @@ button[hidden],
 }
 .post-panel {
   display: grid;
-  grid-template-columns: 1fr 0.9fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
   gap: 7vw;
   align-items: start;
   animation: panel-in 0.65s var(--ease) both;
@@ -1626,7 +1648,7 @@ button[hidden],
     display: none;
   }
   .hero-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     padding: 40px 0 28px;
     gap: 35px;
   }
@@ -1701,7 +1723,7 @@ button[hidden],
     text-align: right;
   }
   .story-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 45px;
   }
   .story-definition {
@@ -1718,7 +1740,7 @@ button[hidden],
     font-size: 14px;
   }
   .beliefs {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 25px;
     margin: 55px 0 70px;
   }
@@ -1748,7 +1770,7 @@ button[hidden],
     max-width: 100px;
   }
   .team-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 30px 18px;
   }
   .team-card:nth-child(even) {
@@ -1780,7 +1802,7 @@ button[hidden],
     font-size: 12px;
   }
   .product-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 30px 15px;
   }
   .product-card:last-child {
@@ -1811,7 +1833,7 @@ button[hidden],
     font-size: 12px;
   }
   .identity-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 25px;
   }
   .symbol-stage {
@@ -1851,7 +1873,7 @@ button[hidden],
     font-size: 7px;
   }
   .brand-foundations {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 50px;
     margin-top: 55px;
   }
@@ -1882,7 +1904,7 @@ button[hidden],
     justify-content: space-between;
   }
   .post-panel {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 30px;
   }
   .post-story h3 {
@@ -1963,5 +1985,14 @@ button[hidden],
   }
   .botanical {
     will-change: auto;
+  }
+}
+@media (max-width: 760px) {
+  .identity-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .identity-grid > * {
+    min-width: 0;
   }
 }
